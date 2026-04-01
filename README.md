@@ -6,7 +6,7 @@
 
 - 💞️ I’m looking to collaborate on something that looks interesting/challenging. 🤔 Feel encouraged to run anything by me. Who knows, it may capture my attention...
 
-- 📫 How to reach me: 📧email: *_mtobabendev@gmail.com_*, 📱phone: *_509-866-8566_* (*I prefer __text messages__ actually*😁) or my 💻website: *_www.WildCardDEV.com_*
+- 📫 How to reach me: 📧email: *_mtobabendev@gmail.com_*, 📱phone: *_(402) 915-0789‬_* (*I prefer __text messages__ actually*😁) or my 💻website: *_www.WildCardDEV.com_*
 
 - 😄 Pronouns: he/him
 

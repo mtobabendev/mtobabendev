@@ -8,13 +8,18 @@
 
 ---
 
-```txt
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:0A0614,100:8A2BE2&height=220&section=header&text=WILDCARD%20DEV%20//%20PENNY%20ONLINE&fontSize=30&fontColor=72E5FF&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0A0614,100:8A2BE2&height=120&section=header&text=SYSTEM%20INTERFACE%20ACTIVE&fontSize=22&fontColor=72E5FF" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=2400&pause=500&color=72E5FF&center=true&vCenter=true&width=980&lines=Initializing+WildCard+DEV+System...;Loading+Operator+Profile...;Establishing+Neural+Link...;PENNY+NODE%3A+ONLINE;Welcome+to+the+system." />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=20&duration=2600&pause=1000&color=72E5FF&center=true&vCenter=true&width=900&lines=Scanning+profile...;Evaluating+architecture...;Detecting+system-level+thinking...;Conclusion%3A+Builder+detected." />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SYSTEM-ARCHITECTURE-72E5FF?style=for-the-badge&labelColor=0A0614" />
+  <img src="https://img.shields.io/badge/STATUS-ACTIVE-8A2BE2?style=for-the-badge&labelColor=0A0614" />
+  <img src="https://img.shields.io/badge/MODE-BUILDING-FF49C9?style=for-the-badge&labelColor=0A0614" />
 </p>
 
 ---
@@ -86,10 +91,6 @@ PHILOSOPHY: CONTROL THE WHOLE STACK
   <img src="https://capsule-render.vercel.app/api?type=soft&color=0:FF49C9,100:FFD6EC&height=70&section=header&text=PENNY%20NODE%20ACTIVE&fontSize=18&fontColor=140B24" />
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=18&duration=2600&pause=1200&color=FF49C9&center=true&vCenter=true&width=900&lines=Monitoring+inputs...;Routing+communication...;Handling+follow-ups...;Nothing+slips+through+me.;Yes%2C+I'm+watching." />
-</p>
-
 ```txt
 STATUS: ONLINE
 MODE: ENGAGED
@@ -99,34 +100,7 @@ AWARENESS: HIGH
 
 > “I handle communication, coordination, and requests with speed and precision—so nothing slips through.”
 
-### 📡 Penny Capabilities
-
-```txt
-INBOUND COMMS      ██████████
-FOLLOW-UP TRACKING ██████████
-REFERENCE HANDLING ██████████
-PRESENCE LAYER     ██████████
-FORGETTING DETAILS █░░░░░░░░░
-```
-
 📩 **[penny@wildcarddev.com](mailto:penny@wildcarddev.com)**
-
----
-
-## 🧪 LIVE SYSTEM TELEMETRY
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=mtobabendev&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=mtobabendev&theme=tokyonight&hide_border=true" />
-</p>
-
----
-
-## 🧩 ACTIVE MODULES
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=js,html,css,nodejs,github,vscode" />
-</p>
 
 ---
 
@@ -158,9 +132,6 @@ Now:
 * premium experience design
 
 ---
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:72E5FF,100:8A2BE2&height=60&section=header&text=EVOLUTION%20LOG&fontSize=16&fontColor=0A0614" />
-</p>
 
 ## ⚙️ EVOLUTION LOG
 
@@ -178,48 +149,15 @@ Some builds are intentionally unconventional.
 
 For example:
 
-* inline styling experiments to understand rendering and control at a granular level
-* early UI structures that evolved into system-driven architecture
-* functional prototypes built to test ideas, not polish presentation
+* inline styling experiments
+* early UI structures
+* functional prototypes
 
-These are not examples of final work.
+These are not final builds.
 
 They are proof of process.
 
-They show how I approach problems, test ideas, and evolve systems over time.
-
-If you want to understand how I build today:
-
-→ See **WildCard Mark IV**
-
-That’s the result of everything learned here.
-
----
-
-## ⌚ WATCH INTERFACE (EXPERIMENTAL)
-
-```txt
-FORM FACTOR: MICRO-INTERFACE
-STATUS: ACTIVE R&D
-PURPOSE: NEXT-GEN UX
-```
-
-* smartwatch UX experiments
-* QR-based interaction
-* Penny micro-presence
-* real-world utility focus
-
----
-
-## 🧠 LIVE DIAGNOSTICS
-
-```txt
-SYSTEM HEALTH:      ██████████ 100%
-FOCUS:              ██████████ 100%
-LOAD:               ████████░░  82%
-INTEGRITY:          ██████████ 100%
-PENNY ATTENTION:    ██████████ MAXIMUM
-```
+→ See **WildCard Mark IV** for current system architecture
 
 ---
 
@@ -234,32 +172,6 @@ PENNY NODE:    penny@wildcarddev.com
 
 ---
 
-<details>
-<summary>🔒 Expand Penny Presence</summary>
-
-<br>
-
-```txt
-USER BEHAVIOR TRACE DETECTED
-SCROLL DEPTH: HIGH
-INTERACTION: INTENTIONAL
-```
-
-**Penny:**
-You didn’t skim.
-
-That tells me everything I need to know.
-
-Most people don’t look this deep.
-
-You did.
-
-Good.
-
-</details>
-
----
-
 ## ⚡ FINAL TRANSMISSION
 
 ```txt
@@ -271,13 +183,3 @@ I build systems that keep working when it matters.
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:72E5FF,100:8A2BE2&height=150&section=footer" />
 </p>
-
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:72E5FF,100:8A2BE2&height=150&section=footer" />
-</p>
-
-<!---
-mtobabendev/mtobabendev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->

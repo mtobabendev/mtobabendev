@@ -9,6 +9,17 @@
 ---
 
 ```txt
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:0A0614,100:8A2BE2&height=220&section=header&text=WILDCARD%20DEV%20//%20PENNY%20ONLINE&fontSize=30&fontColor=72E5FF&animation=fadeIn" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=2400&pause=500&color=72E5FF&center=true&vCenter=true&width=980&lines=Initializing+WildCard+DEV+System...;Loading+Operator+Profile...;Establishing+Neural+Link...;PENNY+NODE%3A+ONLINE;Welcome+to+the+system." />
+</p>
+
+---
+
+```txt
 BOOT SEQUENCE: ACTIVE
 CORE STATUS: STABLE
 SYSTEM LAYER: LOADED
@@ -17,7 +28,7 @@ PENNY NODE: PRESENT
 
 # 🧠 Matt Tobaben // System Architect
 
-> I don’t build websites.  
+> I don’t build websites.
 > I build **systems that think, respond, and hold up under pressure.**
 
 ---
@@ -34,10 +45,10 @@ SPECIALIZATION: System Design / Interactive UI / Problem Solving
 
 Self-taught full-stack developer with a background in financial operations, workflow optimization, audit-driven analysis, and real-world problem solving.
 
-- identifies inefficiencies fast  
-- builds for real-world stress  
-- creates systems that stay useful after launch  
-- designs experiences that feel intentional and alive  
+* identifies inefficiencies fast
+* builds for real-world stress
+* creates systems that stay useful after launch
+* designs experiences that feel intentional and alive
 
 ---
 
@@ -61,11 +72,11 @@ STATE: EVOLVING
 PHILOSOPHY: CONTROL THE WHOLE STACK
 ```
 
-- ⚡ Full self-contained platform architecture  
-- 🧬 No frameworks / minimal external reliance  
-- 🌀 Holographic UI systems and motion interaction  
-- 📱 Mobile-first with smartwatch experimentation  
-- 🎯 Built to feel like an interface, not a page  
+* ⚡ Full self-contained platform architecture
+* 🧬 No frameworks / minimal external reliance
+* 🌀 Holographic UI systems and motion interaction
+* 📱 Mobile-first with smartwatch experimentation
+* 🎯 Built to feel like an interface, not a page
 
 ---
 
@@ -98,7 +109,7 @@ PRESENCE LAYER     ██████████
 FORGETTING DETAILS █░░░░░░░░░
 ```
 
-📩 **penny@wildcarddev.com**
+📩 **[penny@wildcarddev.com](mailto:penny@wildcarddev.com)**
 
 ---
 
@@ -133,16 +144,55 @@ FORGETTING DETAILS █░░░░░░░░░
 ## 🧭 ORIGIN TRACE
 
 Before:
-- financial operations  
-- audit analysis  
-- loss recovery  
-- workflow optimization  
+
+* financial operations
+* audit analysis
+* loss recovery
+* workflow optimization
 
 Now:
-- full-stack development  
-- system architecture  
-- interactive UI systems  
-- premium experience design  
+
+* full-stack development
+* system architecture
+* interactive UI systems
+* premium experience design
+
+---
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:72E5FF,100:8A2BE2&height=60&section=header&text=EVOLUTION%20LOG&fontSize=16&fontColor=0A0614" />
+</p>
+
+## ⚙️ EVOLUTION LOG
+
+```txt
+PROCESS: ITERATIVE
+METHOD: EXPERIMENTATION
+FOCUS: SYSTEM UNDERSTANDING
+```
+
+Every system starts somewhere.
+
+These repositories represent earlier stages of my development process—where I intentionally explored different approaches, constraints, and architectural decisions.
+
+Some builds are intentionally unconventional.
+
+For example:
+
+* inline styling experiments to understand rendering and control at a granular level
+* early UI structures that evolved into system-driven architecture
+* functional prototypes built to test ideas, not polish presentation
+
+These are not examples of final work.
+
+They are proof of process.
+
+They show how I approach problems, test ideas, and evolve systems over time.
+
+If you want to understand how I build today:
+
+→ See **WildCard Mark IV**
+
+That’s the result of everything learned here.
 
 ---
 
@@ -154,10 +204,10 @@ STATUS: ACTIVE R&D
 PURPOSE: NEXT-GEN UX
 ```
 
-- smartwatch UX experiments  
-- QR-based interaction  
-- Penny micro-presence  
-- real-world utility focus  
+* smartwatch UX experiments
+* QR-based interaction
+* Penny micro-presence
+* real-world utility focus
 
 ---
 
@@ -195,8 +245,8 @@ SCROLL DEPTH: HIGH
 INTERACTION: INTENTIONAL
 ```
 
-**Penny:**  
-You didn’t skim.  
+**Penny:**
+You didn’t skim.
 
 That tells me everything I need to know.
 
@@ -217,6 +267,11 @@ Most developers build features.
 
 I build systems that keep working when it matters.
 ```
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:72E5FF,100:8A2BE2&height=150&section=footer" />
+</p>
+
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:72E5FF,100:8A2BE2&height=150&section=footer" />

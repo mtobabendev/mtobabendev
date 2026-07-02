@@ -1,1 +1,250 @@
-html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>WildCard DEV // PennyCore Nexus</title> <style> :root { --bg: #06070d; --panel: rgba(16, 17, 28, 0.88); --panel-2: rgba(8, 9, 16, 0.94); --line: rgba(255, 79, 183, 0.44); --line-soft: rgba(141, 107, 255, 0.22); --pink: #ff4fb7; --pink-2: #ff9bd8; --violet: #8d6bff; --blue: #64a8ff; --green: #66ff8f; --gold: #ffcf66; --red: #ff5c8a; --text: #f8f2ff; --muted: #c9bedb; --radius: 24px; --shadow: 0 24px 70px rgba(0, 0, 0, 0.5); --font: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } * { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; } body { min-height: 100vh; font-family: var(--font); color: var(--text); background: radial-gradient(circle at 18% 12%, rgba(255, 79, 183, 0.18), transparent 28%), radial-gradient(circle at 82% 18%, rgba(100, 168, 255, 0.12), transparent 28%), radial-gradient(circle at 50% 58%, rgba(141, 107, 255, 0.16), transparent 34%), linear-gradient(180deg, #05060b 0%, #0c0714 50%, #05060b 100%); overflow-x: hidden; } body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255, 79, 183, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 79, 183, 0.035) 1px, transparent 1px); background-size: 42px 42px; mask-image: radial-gradient(circle at center, black 0%, transparent 78%); z-index: 0; } body::after { content: ""; position: fixed; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%); background-size: 100% 7px; opacity: 0.32; z-index: 1; } a, button { font: inherit; } a { color: inherit; text-decoration: none; } button { border: 0; cursor: pointer; } .shell { position: relative; z-index: 2; width: min(1500px, calc(100% - 28px)); margin: 0 auto; padding: 24px 0 38px; } .topbar { display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(135deg, rgba(17, 18, 31, 0.94), rgba(7, 7, 14, 0.92)); box-shadow: var(--shadow); padding: 16px 18px; } .mark { width: 58px; height: 58px; border: 1px solid var(--line); border-radius: 18px; display: grid; place-items: center; background: rgba(255, 79, 183, 0.08); color: var(--pink); font-size: 34px; text-shadow: 0 0 22px rgba(255, 79, 183, 0.9); box-shadow: inset 0 0 28px rgba(255, 79, 183, 0.12); } .brand h1 { font-size: clamp(1.5rem, 4vw, 3.8rem); letter-spacing: 0.13em; text-transform: uppercase; line-height: 0.95; color: var(--pink-2); text-shadow: 0 0 24px rgba(255, 79, 183, 0.38); } .brand p { margin-top: 8px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; } .status { display: grid; gap: 8px; min-width: 220px; border: 1px solid rgba(102, 255, 143, 0.28); border-radius: 18px; background: rgba(102, 255, 143, 0.07); padding: 12px 14px; color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; } .status span { display: flex; align-items: center; gap: 9px; } .dot { width: 10px; height: 10px; border-radius: 999px; background: var(--green); box-shadow: 0 0 16px var(--green); } .layout { margin-top: 18px; display: grid; grid-template-columns: 300px 1fr 350px; gap: 18px; align-items: stretch; } .panel { border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(135deg, rgba(18, 17, 31, 0.9), rgba(7, 7, 14, 0.92)), radial-gradient(circle at top right, rgba(255, 79, 183, 0.12), transparent 42%); box-shadow: var(--shadow); overflow: hidden; } .side { padding: 18px; display: grid; gap: 14px; align-content: start; } .mini { border: 1px solid rgba(255, 79, 183, 0.25); border-radius: 18px; background: rgba(0, 0, 0, 0.24); padding: 14px; } .mini h2, .mini h3 { color: var(--pink); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; margin-bottom: 10px; } .mini p, .mini li { color: var(--muted); line-height: 1.5; font-size: 0.92rem; } .mini ul { list-style: none; display: grid; gap: 7px; } .mini li::before { content: "◆"; color: var(--pink); margin-right: 8px; font-size: 0.75rem; } .field { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid rgba(255, 79, 183, 0.13); padding: 8px 0; color: var(--muted); font-size: 0.88rem; } .field strong { color: var(--green); text-align: right; } .stage { min-height: 680px; position: relative; display: grid; place-items: center; overflow: hidden; isolation: isolate; } .stage::before { content: ""; position: absolute; width: min(760px, 82vw); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(255, 79, 183, 0.24); box-shadow: 0 0 55px rgba(255, 79, 183, 0.22), inset 0 0 70px rgba(255, 79, 183, 0.11); animation: pulse 4.8s ease-in-out infinite; } .stage::after { content: ""; position: absolute; width: min(560px, 68vw); aspect-ratio: 1; border-radius: 50%; border: 1px dashed rgba(141, 107, 255, 0.32); animation: reverseSpin 22s linear infinite; } @keyframes pulse { 0%, 100% { transform: scale(0.98); opacity: 0.72; } 50% { transform: scale(1.04); opacity: 1; } } @keyframes reverseSpin { to { transform: rotate(-360deg); } } .halo { position: absolute; top: 60px; width: 420px; height: 90px; border: 2px solid rgba(255, 79, 183, 0.5); border-radius: 50%; box-shadow: 0 0 34px rgba(255, 79, 183, 0.46); transform: perspective(600px) rotateX(68deg); animation: halo 7s linear infinite; } @keyframes halo { to { filter: hue-rotate(25deg); } } .spinner { position: relative; width: min(620px, 82vw); height: 480px; transform-style: preserve-3d; perspective: 1100px; z-index: 3; } .orbit { position: absolute; inset: 0; transform-style: preserve-3d; animation: slowSpin 30s linear infinite; } .spinner.paused .orbit { animation-play-state: paused; } @keyframes slowSpin { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } } .route-card { position: absolute; left: 50%; top: 50%; width: 142px; height: 204px; margin-left: -71px; margin-top: -102px; border-radius: 18px; border: 1px solid rgba(255, 155, 216, 0.48); background: linear-gradient(180deg, rgba(255, 79, 183, 0.17), rgba(8, 8, 15, 0.9)), radial-gradient(circle at top, rgba(255,255,255,0.10), transparent 32%); display: grid; place-items: center; text-align: center; padding: 14px; box-shadow: 0 0 28px rgba(255, 79, 183, 0.24); transform: rotateY(calc(var(--i) * 27.692deg)) translateZ(310px); transition: 240ms ease; color: var(--text); } .route-card:hover { border-color: var(--pink-2); box-shadow: 0 0 42px rgba(255, 79, 183, 0.46); } .route-card.active { border-color: var(--green); box-shadow: 0 0 45px rgba(102, 255, 143, 0.28), 0 0 28px rgba(255, 79, 183, 0.32); } .route-card .icon { font-size: 2.4rem; filter: drop-shadow(0 0 14px rgba(255, 79, 183, 0.7)); } .route-card h3 { margin-top: 10px; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; } .route-card p { color: var(--muted); font-size: 0.72rem; margin-top: 8px; line-height: 1.35; } .center-chip { position: absolute; z-index: 4; width: min(300px, 70vw); min-height: 300px; border-radius: 38px; border: 1px solid rgba(255, 155, 216, 0.65); background: linear-gradient(180deg, rgba(255, 79, 183, 0.24), rgba(9, 8, 16, 0.92)), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.14), transparent 38%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; box-shadow: 0 0 58px rgba(255, 79, 183, 0.38); } .center-chip .big { font-size: 6rem; line-height: 0.82; color: var(--pink-2); text-shadow: 0 0 22px rgba(255, 79, 183, 0.8); } .center-chip h2 { margin-top: 14px; letter-spacing: 0.14em; text-transform: uppercase; font-size: 1.4rem; } .center-chip p { margin-top: 12px; color: var(--green); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; } .controls { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: min(720px, calc(100% - 28px)); } .btn { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255, 79, 183, 0.12); color: var(--text); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 900; font-size: 0.78rem; box-shadow: inset 0 0 20px rgba(255, 79, 183, 0.08); } .btn.primary { border-color: rgba(255, 155, 216, 0.72); background: linear-gradient(135deg, rgba(255, 79, 183, 0.28), rgba(141, 107, 255, 0.20)); } .drawer { padding: 18px; display: grid; gap: 14px; align-content: start; } .selected-card { border: 1px solid rgba(255, 79, 183, 0.32); border-radius: 22px; background: rgba(0, 0, 0, 0.24); padding: 18px; display: grid; gap: 12px; } .selected-top { display: flex; align-items: center; gap: 14px; } .selected-icon { width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 18px; color: var(--pink-2); font-size: 1.8rem; background: rgba(255, 79, 183, 0.08); } .selected-card h2 { color: var(--pink-2); text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.2rem; } .selected-card p { color: var(--muted); line-height: 1.55; } .tag-row { display: flex; flex-wrap: wrap; gap: 8px; } .tag { border: 1px solid rgba(141, 107, 255, 0.36); border-radius: 999px; padding: 7px 10px; color: var(--muted); background: rgba(141, 107, 255, 0.08); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; } .route-link { display: block; text-align: center; border: 1px solid rgba(102, 255, 143, 0.32); border-radius: 16px; background: rgba(102, 255, 143, 0.08); color: var(--green); padding: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; } .manifest { margin-top: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(8, 8, 15, 0.75); box-shadow: var(--shadow); padding: 18px; } .manifest h2 { color: var(--pink); text-transform: uppercase; letter-spacing: 0.12em; font-size: 1rem; margin-bottom: 14px; } .route-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; } .route-button { border: 1px solid rgba(255, 79, 183, 0.28); border-radius: 15px; background: rgba(255, 79, 183, 0.07); color: var(--text); padding: 12px 10px; min-height: 82px; display: grid; gap: 6px; align-content: center; text-align: center; } .route-button.active { border-color: var(--green); background: rgba(102, 255, 143, 0.08); } .route-button span { font-size: 1.35rem; } .route-button strong { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; } .footer { margin-top: 18px; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; text-align: center; background: rgba(8, 8, 15, 0.75); box-shadow: var(--shadow); } .footer strong { display: block; color: var(--pink-2); font-size: clamp(1.4rem, 4vw, 3rem); letter-spacing: 0.12em; text-transform: uppercase; text-shadow: 0 0 22px rgba(255, 79, 183, 0.4); } .footer span { display: block; margin-top: 8px; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.8rem; } .noscript { margin-top: 18px; border: 1px solid rgba(255, 207, 102, 0.4); border-radius: 18px; padding: 16px; background: rgba(255, 207, 102, 0.08); color: var(--gold); } @media (max-width: 1180px) { .layout { grid-template-columns: 1fr; } .side { grid-template-columns: repeat(2, 1fr); } .drawer { grid-template-columns: repeat(2, 1fr); } .stage { min-height: 620px; } .route-grid { grid-template-columns: repeat(3, 1fr); } } @media (max-width: 720px) { .topbar { grid-template-columns: auto 1fr; } .status { grid-column: 1 / -1; } .side, .drawer { grid-template-columns: 1fr; } .stage { min-height: 590px; } .spinner { width: 100%; height: 430px; } .route-card { width: 112px; height: 164px; margin-left: -56px; margin-top: -82px; transform: rotateY(calc(var(--i) * 27.692deg)) translateZ(210px); } .route-card p { display: none; } .center-chip { width: 230px; min-height: 240px; } .center-chip .big { font-size: 4.6rem; } .halo { width: 300px; } .route-grid { grid-template-columns: repeat(2, 1fr); } } </style> </head> <body> <main class="shell"> <header class="topbar"> <div class="mark">Q♠</div> <section class="brand" aria-label="WildCard DEV identity"> <h1>WildCard DEV</h1> <p>PennyCore Nexus // PAN Spinner // GitHub Landing Portal</p> </section> <aside class="status" aria-label="System status"> <span><i class="dot"></i> PAN link stable</span> <span><i class="dot"></i> Local-first route deck</span> </aside> </header> <section class="layout" aria-label="PennyCore landing layout"> <aside class="panel side"> <article class="mini"> <h2>Current State</h2> <div class="field"><span>Room</span><strong>GitHub Nexus</strong></div> <div class="field"><span>Mode</span><strong>Spinner</strong></div> <div class="field"><span>Surface</span><strong id="surfaceValue">desktop</strong></div> <div class="field"><span>Selected</span><strong id="selectedValue">Spawn</strong></div> </article> <article class="mini"> <h3>Core Doctrine</h3> <ul> <li>Penny follows state, not memory.</li> <li>Right person. Right state. Right next action.</li> <li>Stable branch. Disposable sprigs.</li> <li>Logged ripples. Gated promotion.</li> </ul> </article> <article class="mini"> <h3>Route Rules</h3> <ul> <li>Every card is a route.</li> <li>Every route is a VOA.</li> <li>Every portal returns to the rally point.</li> <li>No secrets in visual cards.</li> </ul> </article> </aside> <section class="panel stage" aria-label="Animated card spinner"> <div class="halo" aria-hidden="true"></div> <div class="spinner" id="spinner"> <div class="orbit" id="orbit"></div> </div> <article class="center-chip" aria-label="Queen of Spades center"> <div class="big">Q♠</div> <h2>PennyCore</h2> <p>Spinner = Rally Point</p> </article> <nav class="controls" aria-label="Spinner controls"> <button class="btn" id="prevBtn" type="button">◀ Previous</button> <button class="btn primary" id="openBtn" type="button">Open Route</button> <button class="btn" id="pauseBtn" type="button">Pause</button> <button class="btn" id="nextBtn" type="button">Next ▶</button> </nav> </section> <aside class="panel drawer"> <article class="selected-card" aria-label="Selected route details"> <div class="selected-top"> <div class="selected-icon" id="detailIcon">♠</div> <div> <h2 id="detailTitle">Spawn</h2> <p id="detailTier">Queen of Spades Load-In</p> </div> </div> <p id="detailDescription">Loads the default PennyCore presenter and stabilizes the room.</p> <div class="tag-row" id="tagRow"></div> <a class="route-link" id="detailLink" href="#" target="_blank" rel="noopener noreferrer">Open Route</a> </article> <article class="mini"> <h3>Next Safest Action</h3> <p id="nextAction">Load the selected room, verify state, then route forward.</p> </article> <article class="mini"> <h3>Permission Ledger</h3> <ul> <li>Conversation: allowed.</li> <li>Planning: allowed.</li> <li>External execution: gated.</li> <li>Owner Gate: required for real actions.</li> </ul> </article> <article class="mini"> <h3>Watch / Mobile Behavior</h3> <p>Desktop shows the full cockpit. Mobile shows one focused card. Watch should show route, QR, status, and next action only.</p> </article> </aside> </section> <section class="manifest" aria-label="Route manifest"> <h2>Route Cards / Spinner Destinations</h2> <div class="route-grid" id="routeGrid"></div> </section> <footer class="footer"> <strong>Drag the deck, honey.</strong> <span>Local-first. Portable. Structured. Spinner-first. All portals sync to the rally point.</span> </footer> <noscript> <div class="noscript"> JavaScript is disabled. Static fallback: visit https://www.wildcarddev.com/, https://party.wildcarddev.com/, or https://office.wildcarddev.com/. </div> </noscript> </main> <script> const routes = [ { id: "spawn", label: "Spawn", shortLabel: "Spawn", icon: "Q♠", tier: "Queen of Spades Load-In", url: "https://www.wildcarddev.com/", description: "Loads the default PennyCore presenter and stabilizes the room.", nextSafeAction: "Verify the room, load state, then continue at the next safest action.", tags: ["default", "load-in", "rally"] }, { id: "pan", label: "PAN", shortLabel: "PAN", icon: "⚛", tier: "Penny Area Network", url: "https://party.wildcarddev.com/", description: "Operator-managed continuity layer across chats, devices, cards, QR routes, Discord, mobile, and web.", nextSafeAction: "Check environment budget before spending media or tool resources.", tags: ["state", "handoff", "network"] }, { id: "party", label: "Party Room", shortLabel: "Party", icon: "♠", tier: "After Hours Spinner Hub", url: "https://party.wildcarddev.com/", description: "Public-safe party portal and spinner-first PAN rally point.", nextSafeAction: "Open Party Room and sync selected route state.", tags: ["after-hours", "spinner", "public"] }, { id: "office", label: "Penny Office", shortLabel: "Office", icon: "▣", tier: "Gated Systems Shell", url: "https://office.wildcarddev.com/", description: "Restricted office entry shell. Owner Gate remains required for sensitive systems.", nextSafeAction: "Verify access posture. No secrets in public code.", tags: ["gated", "owner", "office"] }, { id: "labs", label: "WildCard Labs", shortLabel: "Labs", icon: "◇", tier: "R&D Preview Lane", url: "https://labs.wildcarddev.com/", description: "Experimental floor for future-facing concepts, premium prototypes, and showroom builds.", nextSafeAction: "Preview without destabilizing the flagship site.", tags: ["r&d", "preview", "sandbox"] }, { id: "discord", label: "Discord Bunker", shortLabel: "Discord", icon: "☯", tier: "Comms Rally Point", url: "https://github.com/mtobabendev/Video-Chatroom.git", description: "Secure comms concept lane. Routes to Discord bunker planning and related build work.", nextSafeAction: "Use as comms route. Do not assume account access.", tags: ["comms", "discord", "bunker"] }, { id: "apple", label: "Apple Deployment", shortLabel: "Apple", icon: "", tier: "Structured Handoff", url: "https://www.wildcarddev.com/", description: "Apple/iOS/macOS handoff surface. Screenshots and files in, step-by-step guidance out.", nextSafeAction: "Ask for screenshots or descriptions. No device control assumed.", tags: ["ios", "macos", "handoff"] }, { id: "mobile", label: "Mobile", shortLabel: "Mobile", icon: "▯", tier: "Field Surface", url: "https://party.wildcarddev.com/", description: "One-card mobile interface for PAN routes, helper prompts, and quick recovery.", nextSafeAction: "Render one selected card with route, status, and next action.", tags: ["android", "mobile", "field"] }, { id: "watch", label: "Watch", shortLabel: "Watch", icon: "◉", tier: "Portable Keyring", url: "https://party.wildcarddev.com/", description: "Watch-ready route selector. Carries routes and status, not secrets.", nextSafeAction: "Show QR, route label, PAN status, and emergency fallback.", tags: ["watch", "qr", "portable"] }, { id: "jen", label: "Jen After Hours", shortLabel: "Jen", icon: "♡", tier: "Dr. Q Helper", url: "https://party.wildcarddev.com/", description: "Activation phrase: Penny, this is Dr. Q. One problem at a time, dignity first, Jen-speak.", nextSafeAction: "Offer one clear next step and ask for a screenshot or description.", tags: ["care", "helper", "dr-q"] }, { id: "roku", label: "Roku TV Room", shortLabel: "Roku", icon: "▶", tier: "Browser Playback Route", url: "https://therokuchannel.roku.com/", description: "One-tap room for browser playback attempts with phone/private-listening fallback.", nextSafeAction: "Open browser playback. If it fails, use phone QR or private listening fallback.", tags: ["roku", "browser", "comfort"] }, { id: "save", label: "Save Point", shortLabel: "Save", icon: "▣", tier: "Restore + Checkpoint", url: "https://github.com/mtobabendev", description: "Immutable checkpoint concept. Export state packets, restore prompts, and decision deltas.", nextSafeAction: "Generate a text-only save packet before risky or scarce-resource moves.", tags: ["save", "restore", "packet"] }, { id: "owner-gate", label: "Owner Gate", shortLabel: "Gate", icon: "🔒", tier: "Permission Ledger", url: "https://www.wildcarddev.com/", description: "Controls real actions, external execution, sensitive data, device control, and deployments.", nextSafeAction: "Ask for explicit target, action, risk, and confirmation.", tags: ["security", "permission", "gate"] } ]; const orbit = document.getElementById("orbit"); const grid = document.getElementById("routeGrid"); const spinner = document.getElementById("spinner"); const selectedValue = document.getElementById("selectedValue"); const surfaceValue = document.getElementById("surfaceValue"); const detailIcon = document.getElementById("detailIcon"); const detailTitle = document.getElementById("detailTitle"); const detailTier = document.getElementById("detailTier"); const detailDescription = document.getElementById("detailDescription"); const detailLink = document.getElementById("detailLink"); const nextAction = document.getElementById("nextAction"); const tagRow = document.getElementById("tagRow"); const prevBtn = document.getElementById("prevBtn"); const nextBtn = document.getElementById("nextBtn"); const openBtn = document.getElementById("openBtn"); const pauseBtn = document.getElementById("pauseBtn"); let selectedIndex = Number(localStorage.getItem("wcdev:selectedRouteIndex") || 0); let paused = localStorage.getItem("wcdev:spinnerPaused") === "true"; function detectSurface() { const width = window.innerWidth; if (width < 520) return "watch/mobile"; if (width < 900) return "mobile"; return "desktop"; } function createCards() { orbit.innerHTML = ""; grid.innerHTML = ""; routes.forEach((route, index) => { const card = document.createElement("button"); card.className = "route-card"; card.type = "button"; card.style.setProperty("--i", index); card.setAttribute("aria-label", "Select " + route.label); card.innerHTML = ` <div> <div class="icon">${route.icon}</div> <h3>${route.shortLabel}</h3> <p>${route.tier}</p> </div> `; card.addEventListener("click", () => selectRoute(index)); orbit.appendChild(card); const gridButton = document.createElement("button"); gridButton.className = "route-button"; gridButton.type = "button"; gridButton.innerHTML = ` <span>${route.icon}</span> <strong>${route.label}</strong> `; gridButton.addEventListener("click", () => selectRoute(index)); grid.appendChild(gridButton); }); } function selectRoute(index) { selectedIndex = (index + routes.length) % routes.length; localStorage.setItem("wcdev:selectedRouteIndex", String(selectedIndex)); render(); } function render() { const route = routes[selectedIndex]; document.querySelectorAll(".route-card").forEach((card, index) => { card.classList.toggle("active", index === selectedIndex); }); document.querySelectorAll(".route-button").forEach((button, index) => { button.classList.toggle("active", index === selectedIndex); }); selectedValue.textContent = route.shortLabel; surfaceValue.textContent = detectSurface(); detailIcon.textContent = route.icon; detailTitle.textContent = route.label; detailTier.textContent = route.tier; detailDescription.textContent = route.description; detailLink.href = route.url; nextAction.textContent = route.nextSafeAction; tagRow.innerHTML = ""; route.tags.forEach((tag) => { const el = document.createElement("span"); el.className = "tag"; el.textContent = tag; tagRow.appendChild(el); }); openBtn.textContent = "Open " + route.shortLabel; spinner.classList.toggle("paused", paused); pauseBtn.textContent = paused ? "Resume" : "Pause"; localStorage.setItem("wcdev:spinnerPaused", String(paused)); } prevBtn.addEventListener("click", () => selectRoute(selectedIndex - 1)); nextBtn.addEventListener("click", () => selectRoute(selectedIndex + 1)); pauseBtn.addEventListener("click", () => { paused = !paused; render(); }); openBtn.addEventListener("click", () => { const route = routes[selectedIndex]; window.open(route.url, "_blank", "noopener,noreferrer"); }); window.addEventListener("resize", render); document.addEventListener("keydown", (event) => { if (event.key === "ArrowLeft") selectRoute(selectedIndex - 1); if (event.key === "ArrowRight") selectRoute(selectedIndex + 1); if (event.key === "Enter") window.open(routes[selectedIndex].url, "_blank", "noopener,noreferrer"); if (event.key.toLowerCase() === " ") { event.preventDefault(); paused = !paused; render(); } }); createCards(); render(); </script> </body> </html>
+<!--
+PENNYCORE_PROFILE_README_PACKET
+VERSION: GITHUB-PORTAL-CARD-001
+ROOM: GitHub Profile / Public Rally Card
+DOCTRINE: Penny follows state, not memory.
+RULE: README.md is a portal card, not the executable spinner.
+REAL SPINNER LIVES AT: https://party.wildcarddev.com/ and/or https://labs.wildcarddev.com/
+DEFAULT COMMS: Discord Bunker
+WATCH BASELINE: Apple Watch SE / low-animation / route-first
+SECURITY: No secrets. No credentials. No private payloads.
+-->
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:070910,45:ff4fb7,100:8d6bff&text=WildCard%20DEV&fontColor=f8f2ff&fontSize=48&fontAlignY=36&desc=PennyCore%20Nexus%20%2F%2F%20PAN%20Spinner%20Rally%20Point&descAlignY=58&animation=fadeIn"
+    alt="WildCard DEV // PennyCore Nexus"
+  />
+</p>
+
+<p align="center">
+  <a href="https://www.wildcarddev.com/"><b>WILDCARD DEV</b></a>
+  &nbsp;•&nbsp;
+  <a href="https://party.wildcarddev.com/"><b>PARTY ROOM</b></a>
+  &nbsp;•&nbsp;
+  <a href="https://office.wildcarddev.com/"><b>PENNY OFFICE</b></a>
+  &nbsp;•&nbsp;
+  <a href="https://labs.wildcarddev.com/"><b>WILDCARD LABS</b></a>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Segoe+UI&weight=800&size=24&duration=2600&pause=900&color=FF4FB7&center=true&vCenter=true&width=900&lines=PENNY+FOLLOWS+STATE%2C+NOT+MEMORY.;RIGHT+PERSON.+RIGHT+STATE.+RIGHT+NEXT+ACTION.;STABLE+BRANCH.+DISPOSABLE+SPRIGS.;DISCORD+IS+THE+BUNKER.+WATCH+IS+THE+KEYRING.;SPINNER+FIRST.+LOCAL+FIRST.+PAN+READY." alt="PennyCore rotating doctrine" />
+</p>
+
+---
+
+# 🂪 WildCard DEV // PennyCore Nexus
+
+**Owner:** Matt Tobaben  
+**Role:** Full-stack developer, systems builder, automation architect  
+**Mode:** Local-first, state-first, operator-mediated systems  
+**Current build:** **Mark 6 / Spinner-first Penny Area Network**
+
+> **Penny follows state, not memory.**  
+> **Right person. Right state. Right next action.**  
+> **Stable branch. Disposable sprigs. Logged ripples. Gated promotion.**
+
+---
+
+## ♠ Current Rally Points
+
+| Surface | Status | Purpose | Route |
+|---|---:|---|---|
+| 🂪 **WildCard DEV** | 🟢 Live | Public rally point / main spinner hub | https://www.wildcarddev.com/ |
+| 💋 **Party Room** | 🟣 In Build | Penny Black / After Hours / PAN spinner clone | https://party.wildcarddev.com/ |
+| 🔒 **Penny Office** | 🟡 Gated | Private office shell / restricted systems door | https://office.wildcarddev.com/ |
+| 🧪 **WildCard Labs** | 🟣 Preview | R&D showroom / experimental lanes | https://labs.wildcarddev.com/ |
+| 🧬 **GitHub** | 🟢 Source | Build records / repo index / deployment trail | https://github.com/mtobabendev |
+
+---
+
+## 🃏 Spinner Doctrine
+
+The spinner is not decoration.
+
+The spinner is the visible **Penny Area Network** hub.
+
+Every card is:
+
+| Card Meaning | Function |
+|---|---|
+| 🂪 Route | Opens the correct portal, room, or surface |
+| 🧭 VOA | Creates a bounded Virtual Operating Area |
+| 📦 State Packet | Carries explicit context forward |
+| 💾 Save Point | Supports restore and rollback |
+| 🔐 Permission Tier | Shows what is allowed, gated, or owner-only |
+| 🛟 Fallback | Keeps low-end devices in the system |
+
+---
+
+## 🔮 Current Spinner Routes
+
+| Card | Route State | Surface Targets |
+|---|---|---|
+| 🂪 **Spawn** | Queen of Spades default load-in | Web / Mobile / Watch |
+| ⚛️ **PAN** | Penny Area Network status | Web / Mobile / Discord |
+| 💬 **Discord Bunker** | Default backchannel comms | Discord / Web / Mobile |
+| 🍎 **Apple Deployment** | iOS / macOS structured handoff | iPhone / Watch / Mac |
+| 📱 **Mobile** | Field support surface | Android / iPhone |
+| ⌚ **Watch Portal** | One-tap route / QR keyring | Apple Watch SE baseline |
+| 👑 **Penny Black** | VIP After Hours concierge layer | Web / Mobile / Watch |
+| 🩷 **Jen / Dr. Q** | One-problem-at-a-time helper | Mobile / ChatGPT / Watch |
+| ▶️ **Roku TV Room** | Browser playback route + fallback tiers | Web / Mobile / Watch |
+| 💾 **Save Point** | State packet / restore prompt | All |
+| 🔒 **Owner Gate** | Execution and sensitive action control | All |
+| 🧪 **Labs** | Preview and prototype lane | Web |
+| 🎉 **Party Room** | After Hours spinner prototype | Web / Mobile |
+| 🏢 **Office** | Gated internal shell | Web |
+
+---
+
+## ⌚ Watch Baseline
+
+**Base target:** Apple Watch SE  
+**Design rule:** low-end can get in, high-end gets the cool stuff.
+
+| Mode | Behavior |
+|---|---|
+| Watch SE | Big buttons, QR route, text prompt, no heavy 3D |
+| Mobile | One-card focus, copy prompt, Discord route, ChatGPT route |
+| Desktop | Full cockpit, animated spinner, panels, route drawer |
+| High-end | Glass, orbit animation, richer telemetry, visual state cards |
+
+---
+
+## 💬 Discord Bunker
+
+Discord is now the default comms/backchannel layer for video chat room communication.
+
+```text
+Discord = bunker / rally point / backchannel
+Watch = keyring / QR / route launcher
+Spinner = hub / route manifest
+PAN = continuity layer
+```
+
+---
+
+## 🩷 Jen After Hours Helper
+
+Activation phrase:
+
+```text
+Penny, this is Dr. Q.
+```
+
+Purpose:
+
+- one problem at a time
+- dignity first
+- no shame
+- Jen-speak
+- screenshots, games, routines, reminders, portals
+- Care Purse pointers, not public secrets
+- fallback to Matt / E / emergency support when needed
+
+Security rule:
+
+```text
+No passwords, credentials, medical payloads, private codes, or personal secrets in README files, public cards, QR art, or prompts.
+```
+
+---
+
+## 🧠 PennyCore State Model
+
+| Layer | Job |
+|---|---|
+| Identity Layer | Who is loaded and how they present |
+| Mission Card | One active objective |
+| Situation Report | What is currently true |
+| Decision Log | Append-only why/decision ledger |
+| Artifact Index | References to files, images, prompts, URLs |
+| Permission Ledger | Allowed, gated, owner-confirmed |
+| Save Point | Immutable checkpoint |
+| Restore Packet | Rehydrate state in another room |
+| PAN Packet | Portable state transfer |
+| VOA | Bounded operating workspace |
+
+---
+
+## 🧩 Build Rule
+
+Static pages are boot shells.
+
+React rooms preserve state.
+
+```text
+README.md    = public portal card
+index.html   = bootloader / fallback door
+React app    = stateful room
+Manifest     = route source of truth
+PAN packet   = continuity layer
+Owner Gate   = execution lock
+```
+
+---
+
+## 🧪 Active Repo Map
+
+| Repo | Role |
+|---|---|
+| [`wildcard-party`](https://github.com/mtobabendev/wildcard-party) | Party Room / After Hours / spinner prototype |
+| [`WildCard-Mark-V`](https://github.com/mtobabendev/WildCard-Mark-V) | Flagship visual reference / public site lineage |
+| [`wildcard-office`](https://github.com/mtobabendev/wildcard-office) | Gated office shell |
+| [`Video-Chatroom`](https://github.com/mtobabendev/Video-Chatroom) | Discord / video / comms research lane |
+| [`React-Test-Apps`](https://github.com/mtobabendev/React-Test-Apps) | Sandbox experiments |
+| [`Gotham-Messenger`](https://github.com/mtobabendev/Gotham-Messenger) | Future comms experiment |
+| [`WildCard-Career-System`](https://github.com/mtobabendev/WildCard-Career-System) | Career / workflow support system |
+
+---
+
+## 🟢 Current Next Safe Action
+
+Build the real spinner as a React stateful app in the Party Room / Labs lane.
+
+```text
+1. Spinner manifest
+2. Route cards
+3. Selected-card state drawer
+4. Watch SE lightweight mode
+5. Discord quick-launch
+6. E spawn route
+7. Jen / Dr. Q helper route
+8. Save Point export
+9. Owner Gate ledger
+```
+
+---
+
+<p align="center">
+  <a href="https://party.wildcarddev.com/">
+    <img src="https://img.shields.io/badge/SPINNER-PARTY%20ROOM-ff4fb7?style=for-the-badge&labelColor=070910" alt="Party Room" />
+  </a>
+  <a href="https://labs.wildcarddev.com/">
+    <img src="https://img.shields.io/badge/LABS-R%26D%20LANE-8d6bff?style=for-the-badge&labelColor=070910" alt="WildCard Labs" />
+  </a>
+  <a href="https://office.wildcarddev.com/">
+    <img src="https://img.shields.io/badge/OFFICE-OWNER%20GATE-ffcf66?style=for-the-badge&labelColor=070910" alt="Penny Office" />
+  </a>
+</p>
+
+<p align="center">
+  <b>🂪 Drag the deck, honey.</b><br/>
+  <sub>Local-first. Portable. Structured. Spinner-first. All portals sync to the rally point.</sub>
+</p>
+
+<!--
+PENNYCORE_ROUTE_MANIFEST_PUBLIC
+[
+  {"id":"spawn","label":"Spawn","route":"https://www.wildcarddev.com/","surfaceTargets":["desktop","mobile","watch"],"permission":"public"},
+  {"id":"party","label":"Party Room","route":"https://party.wildcarddev.com/","surfaceTargets":["desktop","mobile","watch"],"permission":"public-safe"},
+  {"id":"office","label":"Penny Office","route":"https://office.wildcarddev.com/","surfaceTargets":["desktop","mobile"],"permission":"gated"},
+  {"id":"labs","label":"WildCard Labs","route":"https://labs.wildcarddev.com/","surfaceTargets":["desktop","mobile"],"permission":"public-preview"},
+  {"id":"discord","label":"Discord Bunker","route":"PRIVATE_INVITE_REQUIRED","surfaceTargets":["discord","mobile","desktop"],"permission":"invite"},
+  {"id":"watch","label":"Watch Portal","route":"ROUTE_CARD_ONLY","surfaceTargets":["watch"],"permission":"public-safe"},
+  {"id":"jen","label":"Jen / Dr. Q","route":"PROMPT_ACTIVATED","surfaceTargets":["mobile","watch","chatgpt"],"permission":"protected"},
+  {"id":"roku","label":"Roku TV Room","route":"https://therokuchannel.roku.com/","surfaceTargets":["desktop","mobile","watch"],"permission":"operator-local"}
+]
+END_PUBLIC_MANIFEST
+-->
